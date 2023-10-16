@@ -1,0 +1,24 @@
+header h1{
+    text-align: center;
+}
+
+input{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 146px;
+    height: 20px;
+    border: 2px solid;
+    border-radius: 10px;
+    text-align: center;
+}
+
+button{
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: 40px;
+    border: 2px solid;
+    border-radius: 10px;
+    border-radius: 10px;
+}
