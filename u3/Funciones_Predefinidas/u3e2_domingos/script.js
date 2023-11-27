@@ -10,11 +10,11 @@ var MesAniversario = FechaHoy.getMonth();
 var diaAniversario = FechaHoy.getDate();
 
 // Bucle se ejecutara mientras las valores de Año, mes y dia de las dos fechas sean distintos
-while (FechaHoy.getFullYear <= 2100) {
-    if (diaAniversario == ) {
+// while (FechaHoy.getFullYear <= 2100) {
+//     if (diaAniversario == ) {
         
-    }
-}
+//     }
+// }
 
 
 document.getElementById("contenedor").innerHTML =+ Diferencia;
