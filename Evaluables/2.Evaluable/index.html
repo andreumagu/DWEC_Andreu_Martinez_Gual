@@ -33,11 +33,11 @@
                             <option selected="true" disabled="disabled" value="-1">Selecciona una ciudad del mundo</option>
                         </select>
                     </div>
-                    <button type="button" class="btn btn-primary" onclick="iniciarJuego();">Iniciar</button>
+                    <button type="button" class="btn btn-primary" onclick="iniciarJuego();" id="iniciarButton">Iniciar</button>
                     <button type="button" class="btn btn-secondary" onclick="reiniciarJuego()">Reiniciar</button>
                 </div>
                 <div class="container text-center mb-5">
-                    <h4 id="cuentaAtras">XXXX</h4>
+                    <h2 id="cuentaAtras">XXXX</h2>
                 </div>
                 <div class="container">
                     <div class="jumbotron text-center" id="pista">
@@ -53,7 +53,12 @@
             </div>
         </div>
     </div>
-    
+
+    <div class="container d-flex justify-content-around py-5">
+        <button type="button" class="dificultad facil selected" id="facil" value="0" onclick="cambiarDificultad()">Fácil</button>
+        <button type="button" class="dificultad medio" id="medio" value="1" onclick="cambiarDificultad()">Medio</button>
+        <button type="button" class="dificultad dificil" id="dificil" value="2" onclick="cambiarDificultad()">Difícil</button>
+    </div>
     
     <div class="modal" tabindex="-1" role="dialog" id="myModal">
         <div class="modal-dialog modal-dialog-centered" role="document">

@@ -22,134 +22,205 @@ var ciudades = [
     { nombre: "Sao Paulo", lat: -23.5505, lon: -46.6333 }
 ];
 
-// Arrays de pistas para cada ciudad
+// Arrays de pistas para cada ciudad con diferentes niveles de dificultad
 var pistasNuevaYork = [
-    "Ciudad que alberga el famoso Times Square",
-    "Cuna del hip-hop y el punk",
-    "Ubicada en el estado de Nueva York"
+    // Fácil
+    ["Conocida como la Gran Manzana", "Famosa por la Estatua de la Libertad", "Ubicada en la costa este de EE. UU."],
+    // Medio
+    ["Uno de los distritos más diversos del mundo", "Epicentro de la cultura hip-hop", "Parques icónicos como el Central Park"],
+    // Difícil
+    ["Alberga la Biblioteca Pública más grande de EE. UU.", "Ubicación de la famosa High Line", "Centro de las finanzas internacionales y la Bolsa de Nueva York"]
 ];
 
 var pistasLondres = [
-    "La ciudad del río Támesis",
-    "Hogar de Sherlock Holmes",
-    "Centro cultural y financiero del Reino Unido"
+    // Fácil
+    ["Capital del Reino Unido", "El río Támesis la atraviesa", "Famosa por el Palacio de Buckingham"],
+    // Medio
+    ["Residencia de la realeza británica", "Escenario de los Juegos Olímpicos de 2012", "Teatros del West End"],
+    // Difícil
+    ["Influencia histórica del Imperio Británico", "Epicentro de la Revolución Industrial", "Distrito financiero con el Gherkin y el Shard"]
 ];
 
 var pistasParis = [
-    "Destino romántico con calles empedradas",
-    "Cuna de la Revolución Francesa",
-    "Famosa por su alta cocina y moda"
+    // Fácil
+    ["Destino romántico con calles empedradas", "Cuna de la Revolución Francesa", "Famosa por su alta cocina y moda"],
+    // Medio
+    ["Conocida como la Ciudad de la Luz", "El río Sena la atraviesa", "Importante centro artístico y cultural"],
+    // Difícil
+    ["Sede de la Liga de la Justicia", "Influencia de la Belle Époque y el Art Nouveau", "Alberga famosos museos como el Louvre y el Museo de Orsay"]
 ];
 
 var pistasTokio = [
-    "Ciudad tecnológica con luces de neón",
-    "Sede de la industria del manga y anime",
-    "Ofrece una mezcla única de tradición y modernidad"
+    // Fácil
+    ["Capital tecnológica de Japón", "Famosa por sus rascacielos y luces de neón", "Centro de la cultura pop"],
+    // Medio
+    ["Sede de la industria del manga y el anime", "Ofrece una mezcla única de tradición y modernidad", "Alberga el Palacio Imperial"],
+    // Difícil
+    ["Antigua Edo con una rica historia samurái", "Epicentro de la tecnología y la innovación", "Escenario de la película 'Lost in Translation'"]
 ];
 
 var pistasPekin = [
-    "Capital milenaria con una gran muralla",
-    "Cuna de la antigua dinastía Ming",
-    "Sede de los Juegos Olímpicos de 2008"
+    // Fácil
+    ["Capital de China con una rica historia", "Construida alrededor de la Ciudad Prohibida", "Cuna de la dinastía Ming"],
+    // Medio
+    ["Famosa por la Gran Muralla China", "Epicentro de la vida política china", "Escenario de los Juegos Olímpicos de 2008"],
+    // Difícil
+    ["Influencia de la Dinastía Qing", "Alberga la Plaza de Tiananmen", "Centro cultural con la Ciudad Prohibida y el Templo del Cielo"]
 ];
 
 var pistasRoma = [
-    "Ciudad eterna con monumentos antiguos",
-    "Cuna del Imperio Romano",
-    "Famosa por el Coliseo y el Vaticano"
+    // Fácil
+    ["Ciudad eterna con monumentos antiguos", "Cuna del Imperio Romano", "Famosa por el Coliseo y el Foro Romano"],
+    // Medio
+    ["Sede del Vaticano y la Basílica de San Pedro", "Influencia de la Antigua Roma en la arquitectura", "Alberga la Fontana di Trevi"],
+    // Difícil
+    ["Centro cultural y religioso de Italia", "Ruinas antiguas como el Palatino", "Famosa por la Capilla Sixtina de Miguel Ángel"
+    ]
 ];
 
 var pistasSidney = [
-    "Ciudad costera con la Ópera de Sídney",
-    "Puente del Puerto ofrece vistas impresionantes",
-    "Hogar de la Gran Barrera de Coral"
+    // Fácil
+    ["Ciudad costera con la Ópera de Sídney", "Puente del Puerto ofrece vistas impresionantes", "Hogar de la Gran Barrera de Coral"],
+    // Medio
+    ["Epicentro cultural y económico de Australia", "Famosa por la arquitectura moderna", "Ubicada en Nueva Gales del Sur"],
+    // Difícil
+    ["Influencia aborigen en la cultura", "Alberga la Galería de Arte de Nueva Gales del Sur", "Escenario de los Juegos Olímpicos de 2000"]
 ];
 
 var pistasBerlin = [
-    "Capital con historia marcada por la Guerra Fría",
-    "Famosa por su vida nocturna",
-    "Cuna de la escuela de diseño Bauhaus"
+    // Fácil
+    ["Capital con historia marcada por la Guerra Fría", "Famosa por su vida nocturna", "Cuna de la escuela de diseño Bauhaus"],
+    // Medio
+    ["Influencia de la Guerra Fría en la arquitectura", "Alberga el Muro de Berlín como monumento histórico", "Epicentro artístico y cultural"],
+    // Difícil
+    ["Escenario clave en la Guerra Fría", "Centro cultural con la Isla de los Museos", "Famosa por su arquitectura moderna y la Puerta de Brandeburgo"]
 ];
 
 var pistasMadrid = [
-    "Capital con bulliciosas plazas y vida nocturna",
-    "Famosa por el Museo del Prado",
-    "Centro de la cultura española"
+    // Fácil
+    ["Capital con bulliciosas plazas y vida nocturna", "Famosa por el Museo del Prado", "Centro de la cultura española"],
+    // Medio
+    ["Influencia de la historia árabe y judía", "Epicentro gastronómico y cultural", "Alberga el Palacio Real de Madrid"],
+    // Difícil
+    ["Escenario de la Guerra Civil Española", "Centro cultural con el Triángulo del Arte", "Famosa por la Puerta del Sol y la Gran Vía"]
 ];
 
 var pistasCiudadMexico = [
-    "Capital con una rica historia precolombina",
-    "Cuna de la civilización azteca",
-    "Ofrece una mezcla de arquitectura colonial y moderna"
+    // Fácil
+    ["Capital con una rica historia precolombina", "Cuna de la civilización azteca", "Ofrece una mezcla de arquitectura colonial y moderna"],
+    // Medio
+    ["Influencia de la cultura azteca en la arquitectura", "Alberga la Plaza de la Constitución y la Catedral Metropolitana", "Epicentro gastronómico con la comida mexicana"],
+    // Difícil
+    ["Historia precolombina con las civilizaciones maya y azteca", "Escenario de la Revolución Mexicana", "Centro cultural con el Museo Frida Kahlo y el Palacio de Bellas Artes"
+    ]
 ];
 
 var pistasToronto = [
-    "Principal ciudad canadiense con diversidad cultural",
-    "Famosa por la CN Tower y las Cataratas del Niágara",
-    "Ubicada a orillas del lago Ontario"
+    // Fácil
+    ["Principal ciudad canadiense con diversidad cultural", "Famosa por la CN Tower y las Cataratas del Niágara", "Ubicada a orillas del lago Ontario"],
+    // Medio
+    ["Influencia multicultural en la arquitectura", "Centro financiero y económico de Canadá", "Epicentro cultural con el Museo Real de Ontario"],
+    // Difícil
+    ["Historia colonial británica y francesa", "Escenario clave en la Guerra de 1812", "Centro cultural con la Galería de Arte de Ontario y el Distrito del Entretenimiento"
+    ]
 ];
 
 var pistasRioJaneiro = [
-    "Ciudad carioca famosa por su carnaval",
-    "Hogar de la estatua del Cristo Redentor",
-    "Ubicada en la costa atlántica de Brasil"
+    // Fácil
+    ["Ciudad carioca famosa por su carnaval", "Hogar de la estatua del Cristo Redentor", "Ubicada en la costa atlántica de Brasil"],
+    // Medio
+    ["Influencia africana en la cultura y la música", "Epicentro de la samba y la bossa nova", "Alberga el Pan de Azúcar y el Estadio Maracaná"],
+    // Difícil
+    ["Historia colonial portuguesa", "Centro cultural con el Museo de Arte Moderno y el Teatro Municipal", "Famosa por sus playas como Copacabana e Ipanema"]
 ];
 
 var pistasEstambul = [
-    "Ciudad transcontinental entre Europa y Asia",
-    "Antigua capital de tres imperios sucesivos",
-    "Conocida por sus mezquitas y bazares"
+    // Fácil
+    ["Ciudad transcontinental entre Europa y Asia", "Antigua capital de tres imperios sucesivos", "Conocida por sus mezquitas y bazares"],
+    // Medio
+    ["Influencia otomana en la arquitectura", "Alberga la Iglesia de Santa Sofía y la Mezquita Azul", "Epicentro cultural con el Gran Bazar"],
+    // Difícil
+    ["Historia otomana y bizantina", "Punto estratégico en la Ruta de la Seda", "Centro cultural con el Palacio de Topkapi y el Puente Gálata"]
 ];
 
 var pistasMoscú = [
-    "Capital rusa con una rica historia",
-    "Famosa por la Plaza Roja y la Catedral de San Basilio",
-    "Centro político, económico y cultural del país"
+    // Fácil
+    ["Capital rusa con una rica historia", "Famosa por la Plaza Roja y la Catedral de San Basilio", "Centro político, económico y cultural del país"],
+    // Medio
+    ["Influencia de la época zarista en la arquitectura", "Epicentro cultural con el Kremlin y la Galería Tretiakov", "Alberga la Universidad Estatal de Moscú"],
+    // Difícil
+    ["Historia soviética y la Revolución de Octubre", "Centro cultural con el Teatro Bolshói y la Biblioteca Lenin", "Famosa por la arquitectura estalinista y la Catedral de Cristo Salvador"]
 ];
 
 var pistasBangkok = [
-    "Capital tailandesa con templos ornamentados",
-    "Conocida por su animada vida callejera",
-    "Ubicada a orillas del río Chao Phraya"
+    // Fácil
+    ["Capital tailandesa con templos ornamentados", "Conocida por su animada vida callejera", "Ubicada a orillas del río Chao Phraya"],
+    // Medio
+    ["Influencia budista en la arquitectura y la cultura", "Epicentro culinario con la comida callejera", "Alberga el Gran Palacio y el Templo del Buda Esmeralda"],
+    // Difícil
+    ["Historia real tailandesa y la dinastía Chakri", "Centro cultural con el Museo Nacional de Bangkok y el Teatro de Siam Niramit", "Famosa por su vida nocturna y mercados flotantes"]
 ];
 
 var pistasDubai = [
-    "Ciudad de los rascacielos y el lujo",
-    "Famosa por el Burj Khalifa y las islas artificiales",
-    "Importante centro financiero y turístico"
+    // Fácil
+    ["Ciudad de los rascacielos y el lujo", "Famosa por el Burj Khalifa y las islas artificiales", "Importante centro financiero y turístico"],
+    // Medio
+    ["Influencia árabe e islámica en la arquitectura", "Epicentro de compras y entretenimiento", "Alberga el Burj Al Arab y el Dubai Mall"],
+    // Difícil
+    ["Historia de rápido desarrollo y modernización", "Centro cultural con la Ópera de Dubái y el Museo de Dubái", "Famosa por sus proyectos arquitectónicos innovadores"]
 ];
 
 var pistasSeul = [
-    "Capital con alta tecnología y tradiciones antiguas",
-    "Hogar de palacios históricos y mercados vibrantes",
-    "Centro de la ola coreana en entretenimiento y música"
+    // Fácil
+    ["Capital con alta tecnología y tradiciones antiguas", "Hogar de palacios históricos y mercados vibrantes", "Centro de la ola coreana en entretenimiento y música"],
+    // Medio
+    ["Influencia de la dinastía Joseon en la arquitectura", "Epicentro de la tecnología y la moda", "Alberga la Torre de Seúl y el Palacio de Gyeongbokgung"],
+    // Difícil
+    ["Historia de ocupación japonesa y la Guerra de Corea", "Centro cultural con el Museo Nacional de Corea y el Templo Jogyesa", "Famosa por su gastronomía y la vida nocturna en Gangnam"]
 ];
 
 var pistasLosAngeles = [
-    "Centro de la industria del entretenimiento en Hollywood",
-    "Ubicada en el estado de California",
-    "Famosa por sus playas y estilo de vida relajado"
+    // Fácil
+    ["Centro de la industria del entretenimiento en Hollywood", "Ubicada en el estado de California", "Famosa por sus playas y estilo de vida relajado"],
+    // Medio
+    ["Influencia del cine y la televisión en la cultura", "Epicentro de la música y la moda", "Alberga Hollywood y Beverly Hills"],
+    // Difícil
+    ["Historia de expansión durante la fiebre del oro", "Centro cultural con el Museo de Arte del Condado de Los Ángeles y el Teatro Walt Disney", "Famosa por su diversidad étnica y la vida nocturna en Sunset Strip"]
 ];
 
 var pistasChicago = [
-    "Ciudad arquitectónicamente innovadora",
-    "Ubicada en la costa del lago Míchigan",
-    "Conocida por su arquitectura y escena musical"
+    // Fácil
+    ["Ciudad arquitectónicamente innovadora", "Ubicada en la costa del lago Míchigan", "Conocida por su arquitectura y escena musical"],
+    // Medio
+    ["Influencia de la arquitectura moderna y la Escuela de Chicago", "Epicentro cultural y financiero del Medio Oeste", "Alberga el Instituto de Arte de Chicago y el Millennium Park"],
+    // Difícil
+    ["Historia de la prohibición y la mafia", "Centro cultural con el Museo Field de Historia Natural y la Ópera de Chicago", "Famosa por su arquitectura de rascacielos y la escena teatral en el Loop"
+    ]
 ];
 
 var pistasSaoPaulo = [
-    "Principal ciudad brasileña y centro financiero",
-    "Famosa por su diversidad cultural y culinaria",
-    "Centro de la escena artística y de diseño en América Latina"
+    // Fácil
+    ["Principal ciudad brasileña y centro financiero", "Famosa por su diversidad cultural y culinaria", "Centro de la escena artística y de diseño en América Latina"],
+    // Medio
+    ["Influencia de la arquitectura moderna y contemporánea", "Epicentro cultural y de negocios en América del Sur", "Alberga la Avenida Paulista y el Museo de Arte de São Paulo"],
+    // Difícil
+    ["Historia colonial portuguesa y la independencia de Brasil", "Centro cultural con el Parque Ibirapuera y el Museo de Arte Contemporáneo", "Famosa por su carnaval y la vida nocturna en la calle Augusta"]
 ];
+
 
 // Variable para almacenar la ubicación actual de Carmen Sandiego
 var ubicacionCarmen;
+
+var tiempo; // Variable para almacenar el tiempo del contador
+var timeoutId; // Identificador del contador
+var d = 0; // Dificultad de las pistas
 
 // Función que inicia el juego
 function iniciarJuego(){
     ubicacionCarmen = randomCity(ciudades); // Seleccionamos una ubicación aleatoria donde Carmen Sandiego se escondera
     tiempo = 20; // Establecemos el tiempo en segundos del contador
+    document.getElementById("iniciarButton").disabled = true;
+    document.getElementById("ciudadesSelect").disabled = false;
     cuentaAtras(); // Iniciamos la cuenta atras
 }
 
@@ -161,13 +232,12 @@ function reiniciarJuego(){
     iniciarJuego(); // Iniciamos el juego
 }
 
-var tiempo = 20; // Establecemos el tiempo en segundos del contador
-var timeoutId; // Identificador del contador
-
 // Función que realiza la cuenta atrás
 function cuentaAtras() {
     document.getElementById('cuentaAtras').innerHTML = tiempo;
     if(tiempo == 0){
+        document.getElementById("ciudadesSelect").disabled = true;
+        document.getElementById('cuentaAtras').innerHTML = "XXXX";
         $('#finTiempo').modal('show'); // Mostramos popup de derrota
     }else{
         if (comprobarCiudad() == false) { // Restamos 1s al cintador si no se encontrado a Carmen Sandiego
@@ -240,71 +310,95 @@ function toRad(grados) {
     return grados * (Math.PI / 180);
 }
 
+// Cambiar dificultad de las pistas
+document.getElementById("facil").onclick = function(e){
+    d = this.value;
+}
+
+document.getElementById("medio").onclick = function(e){
+    d = this.value;
+}
+
+document.getElementById("dificil").onclick = function(e){
+    d = this.value;
+}
+
+// Cambiamos el color de boton seleccionado
+$('.dificultad').on('click', function(){
+    $('.dificultad').removeClass('selected');
+    $(this).addClass('selected');
+});
+
 // Función que proporciona pistas sobre la ciudad donde se esconde Carmen Sandiego
 function pista(){
     let i = Math.round(Math.random() * 2);
-    switch (ciudades.indexOf(ubicacionCarmen)) {
-        case 0:
-            document.getElementById("pista").innerHTML = pistasNuevaYork[i];
-            break;
-        case 1:
-            document.getElementById("pista").innerHTML = pistasLondres[i];
-            break;
-        case 2:
-            document.getElementById("pista").innerHTML = pistasParis[i];
-            break;
-        case 3:
-            document.getElementById("pista").innerHTML = pistasTokio[i];
-            break;
-        case 4:
-            document.getElementById("pista").innerHTML = pistasPekin[i];
-            break;
-        case 5:
-            document.getElementById("pista").innerHTML = pistasRoma[i];
-            break;
-        case 6:
-            document.getElementById("pista").innerHTML = pistasSidney[i];
-            break;
-        case 7:
-            document.getElementById("pista").innerHTML = pistasBerlin[i];
-            break;
-        case 8:
-            document.getElementById("pista").innerHTML = pistasMadrid[i];
-            break;
-        case 9:
-            document.getElementById("pista").innerHTML = pistasCiudadMexico[i];
-            break;
-        case 10:
-            document.getElementById("pista").innerHTML = pistasToronto[i];
-            break;
-        case 11:
-            document.getElementById("pista").innerHTML = pistasRioJaneiro[i];
-            break;
-        case 12:
-            document.getElementById("pista").innerHTML = pistasEstambul[i];
-            break;
-        case 13:
-            document.getElementById("pista").innerHTML = pistasMoscú[i];
-            break;
-        case 14:
-            document.getElementById("pista").innerHTML = pistasBangkok[i];
-            break;
-        case 15:
-            document.getElementById("pista").innerHTML = pistasDubai[i];
-            break;
-        case 16:
-            document.getElementById("pista").innerHTML = pistasSeul[i];
-            break;
-        case 17:
-            document.getElementById("pista").innerHTML = pistasLosAngeles[i];
-            break;
-        case 18:
-            document.getElementById("pista").innerHTML = pistasChicago[i];
-            break;
-        case 19:
-            document.getElementById("pista").innerHTML = pistasSaoPaulo[i];
-            break;
-        default:
-            document.getElementById("pista").innerHTML = "Debes inicar el juego";
+    if (tiempo > 0) {
+        switch (ciudades.indexOf(ubicacionCarmen)) {
+            case 0:
+                document.getElementById("pista").innerHTML = pistasNuevaYork[d][i];
+                break;
+            case 1:
+                document.getElementById("pista").innerHTML = pistasLondres[d][i];
+                break;
+            case 2:
+                document.getElementById("pista").innerHTML = pistasParis[d][i];
+                break;
+            case 3:
+                document.getElementById("pista").innerHTML = pistasTokio[d][i];
+                break;
+            case 4:
+                document.getElementById("pista").innerHTML = pistasPekin[d][i];
+                break;
+            case 5:
+                document.getElementById("pista").innerHTML = pistasRoma[d][i];
+                break;
+            case 6:
+                document.getElementById("pista").innerHTML = pistasSidney[d][i];
+                break;
+            case 7:
+                document.getElementById("pista").innerHTML = pistasBerlin[d][i];
+                break;
+            case 8:
+                document.getElementById("pista").innerHTML = pistasMadrid[d][i];
+                break;
+            case 9:
+                document.getElementById("pista").innerHTML = pistasCiudadMexico[d][i];
+                break;
+            case 10:
+                document.getElementById("pista").innerHTML = pistasToronto[d][i];
+                break;
+            case 11:
+                document.getElementById("pista").innerHTML = pistasRioJaneiro[d][i];
+                break;
+            case 12:
+                document.getElementById("pista").innerHTML = pistasEstambul[d][i];
+                break;
+            case 13:
+                document.getElementById("pista").innerHTML = pistasMoscú[d][i];
+                break;
+            case 14:
+                document.getElementById("pista").innerHTML = pistasBangkok[d][i];
+                break;
+            case 15:
+                document.getElementById("pista").innerHTML = pistasDubai[d][i];
+                break;
+            case 16:
+                document.getElementById("pista").innerHTML = pistasSeul[d][i];
+                break;
+            case 17:
+                document.getElementById("pista").innerHTML = pistasLosAngeles[d][i];
+                break;
+            case 18:
+                document.getElementById("pista").innerHTML = pistasChicago[d][i];
+                break;
+            case 19:
+                document.getElementById("pista").innerHTML = pistasSaoPaulo[d][i];
+                break;
+            default:
+                document.getElementById("pista").innerHTML = "Debes iniciar el juego";
+        }
+    } else {
+        document.getElementById("pista").innerHTML = "Debes iniciar el juego";
     }
+    
 }
