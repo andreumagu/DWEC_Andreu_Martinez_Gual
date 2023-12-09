@@ -100,9 +100,9 @@ var pistasMadrid = [
     // Fácil
     ["Capital con bulliciosas plazas y vida nocturna", "Famosa por el Museo del Prado", "Centro de la cultura española"],
     // Medio
-    ["Influencia de la historia árabe y judía", "Epicentro gastronómico y cultural", "Alberga el Palacio Real de Madrid"],
+    ["EL BICHO", "Epicentro gastronómico y cultural", "Alberga el Palacio Real"],
     // Difícil
-    ["Escenario de la Guerra Civil Española", "Centro cultural con el Triángulo del Arte", "Famosa por la Puerta del Sol y la Gran Vía"]
+    ["Escenario de la Guerra Civil Española", "Centro cultural con el Triángulo del Arte", "Influencia de la historia árabe y judía"]
 ];
 
 var pistasCiudadMexico = [
@@ -234,22 +234,22 @@ function reiniciarJuego(){
 
 // Función que realiza la cuenta atrás
 function cuentaAtras() {
-    document.getElementById('cuentaAtras').innerHTML = tiempo;
+    document.getElementById('cuentaAtras').innerHTML = tiempo; // Seteamos el tiempo al tiempo de inicio
     if(tiempo == 0){
-        document.getElementById("ciudadesSelect").disabled = true;
-        document.getElementById('cuentaAtras').innerHTML = "XXXX";
+        document.getElementById("ciudadesSelect").disabled = true; // Desactivamos el select
+        document.getElementById('cuentaAtras').innerHTML = "XXXX"; // Quitamos el temporizador
         $('#finTiempo').modal('show'); // Mostramos popup de derrota
     }else{
         if (comprobarCiudad() == false) { // Restamos 1s al cintador si no se encontrado a Carmen Sandiego
-            tiempo-=1;
-            timeoutId = setTimeout("cuentaAtras()",1000);
+            tiempo-=1; // Restamos 1 al temporizador
+            timeoutId = setTimeout("cuentaAtras()",1000); // Esperamos 1 segundo para volver a ejecutar la función cuentaAtras()
         }
     }
 }
 
 // Llenamos el select con los objetos del array ciudades
 ciudades.forEach(function(ciudad, i) {
-    var option = document.createElement("option");
+    var option = document.createElement("option"); // Creacion de elemento del select
     option.value = i; // El valor es la posición en el array
     option.text = ciudad.nombre; // El texto legible es el nombre de la ciudad
     document.getElementById("ciudadesSelect").add(option);
@@ -265,7 +265,7 @@ function comprobarCiudad(){
     if(document.getElementById("ciudadesSelect").value >= 0){
         var ubicacionSelect = ciudades[Number(document.getElementById("ciudadesSelect").value)]; // Obtenemos el objecto de la ciudad seleccionada
         document.getElementById("distancia").innerHTML = calcularDistancia() + "Km"; // Pintamos la distancia entre las dos ubicaciones
-        if (ubicacionCarmen == ubicacionSelect && tiempo > 0) {
+        if (ubicacionCarmen == ubicacionSelect && tiempo > 0) { // Si acertamos la ciudad y el timepo es mayor a 0
             $('#myModal').modal('show'); // Mostramos popup de victoria
             return true;
         } else{
@@ -331,7 +331,7 @@ $('.dificultad').on('click', function(){
 
 // Función que proporciona pistas sobre la ciudad donde se esconde Carmen Sandiego
 function pista(){
-    let i = Math.round(Math.random() * 2);
+    let i = Math.round(Math.random() * 2); // Pista aleatoria
     if (tiempo > 0) {
         switch (ciudades.indexOf(ubicacionCarmen)) {
             case 0:
